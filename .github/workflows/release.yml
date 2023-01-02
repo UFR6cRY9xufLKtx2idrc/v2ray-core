@@ -20,6 +20,7 @@ on:
       - "go.mod"
       - "go.sum"
       - ".github/workflows/*.yml"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -120,6 +121,7 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: ^1.19
+          check-latest: true
 
       - name: Get project dependencies
         run: go mod download
@@ -168,12 +170,12 @@ jobs:
 
       - name: Upload files to GitHub release
         uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release'
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file_glob: true
           file: ./v2ray-${{ steps.get_filename.outputs.ASSET_NAME }}.zip*
           tag: ${{ github.ref }}
+          overwrite: true
 
   signature:
     runs-on: ubuntu-latest
@@ -187,7 +189,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: ^1.18
+          go-version: ^1.19
+          check-latest: true
 
       - uses: actions/download-artifact@v3
         with:
@@ -241,18 +244,18 @@ jobs:
 
       - name: Upload Release.unsigned related files
         uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release'
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file_glob: true
           file: build_artifacts/Release.unsigned*
           tag: ${{ github.ref }}
+          overwrite: true
 
       - name: Upload extra package
         uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release'
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file_glob: true
           file: build_artifacts/v2ray-extra.zip
           tag: ${{ github.ref }}
+          overwrite: true
