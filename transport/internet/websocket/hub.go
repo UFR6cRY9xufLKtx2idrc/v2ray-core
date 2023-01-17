@@ -50,11 +50,11 @@ func (h *requestHandler) ServeHTTP(writer http.ResponseWriter, request *http.Req
 			writer.WriteHeader(http.StatusNotFound)
 			return
 		}
-		earlyDataStr = request.Header.Get(h.earlyDataHeaderName)
+		earlyDataStr := request.Header.Get(h.earlyDataHeaderName)
 		earlyData = base64.NewDecoder(base64.RawURLEncoding, bytes.NewReader([]byte(earlyDataStr)))
 	} else {
 		if strings.HasPrefix(request.URL.RequestURI(), h.path) {
-			earlyDataStr = request.URL.RequestURI()[len(h.path):]
+			earlyDataStr := request.URL.RequestURI()[len(h.path):]
 			earlyData = base64.NewDecoder(base64.RawURLEncoding, bytes.NewReader([]byte(earlyDataStr)))
 		} else {
 			writer.WriteHeader(http.StatusNotFound)
