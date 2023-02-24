@@ -30,7 +30,7 @@ require (
 	go4.org/netipx v0.0.0-20220812043211-3cc044ffd68d
 	golang.org/x/crypto v0.5.0
 	golang.org/x/net v0.5.0
-	golang.org/x/sync v0.0.0-20220907140024-f12130a52804
+	golang.org/x/sync v0.1.0
 	golang.org/x/sys v0.4.0
 	google.golang.org/grpc v1.52.0
 	google.golang.org/protobuf v1.28.1
