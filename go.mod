@@ -11,7 +11,7 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/google/go-cmp v0.5.9
 	github.com/gorilla/websocket v1.5.0
-	github.com/jhump/protoreflect v1.14.1
+	github.com/jhump/protoreflect v1.15.1
 	github.com/lucas-clemente/quic-go v0.31.1
 	github.com/marten-seemann/qtls-go1-18 v0.1.4
 	github.com/marten-seemann/qtls-go1-19 v0.1.2
@@ -29,11 +29,11 @@ require (
 	go.starlark.net v0.0.0-20220817180228-f738f5508c12
 	go4.org/netipx v0.0.0-20220812043211-3cc044ffd68d
 	golang.org/x/crypto v0.5.0
-	golang.org/x/net v0.5.0
+	golang.org/x/net v0.7.0
 	golang.org/x/sync v0.0.0-20220907140024-f12130a52804
-	golang.org/x/sys v0.4.0
+	golang.org/x/sys v0.5.0
 	google.golang.org/grpc v1.52.0
-	google.golang.org/protobuf v1.28.1
+	google.golang.org/protobuf v1.28.2-0.20230222093303-bc1253ad3743
 	gopkg.in/yaml.v3 v3.0.1
 	h12.io/socks v1.0.3
 )
@@ -43,6 +43,7 @@ require (
 	github.com/ajg/form v1.5.1 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/boljen/go-bitmap v0.0.0-20151001105940-23cd2fb0ce7d // indirect
+	github.com/bufbuild/protocompile v0.4.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgryski/go-metro v0.0.0-20200812162917-85c65e2d0165 // indirect
 	github.com/ebfe/bcrypt_pbkdf v0.0.0-20140212075826-3c8d2dcb253a // indirect
@@ -68,7 +69,7 @@ require (
 	github.com/xtaci/smux v1.5.15 // indirect
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e // indirect
 	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
-	golang.org/x/text v0.6.0 // indirect
+	golang.org/x/text v0.7.0 // indirect
 	golang.org/x/tools v0.1.12 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/genproto v0.0.0-20221118155620-16455021b5e6 // indirect
